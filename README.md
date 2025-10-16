@@ -1,2 +1,2 @@
 # ADS-Coursework-New
-Designing, developing &amp; testing a journey planner
+Designing, developing and testing solutions for the London Underground system
