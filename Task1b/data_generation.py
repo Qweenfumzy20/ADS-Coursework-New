@@ -17,12 +17,11 @@ ch = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(ch)
 
 def generate_data(n):
-
     return list(range(n))
 
 def build_hashtable(n, table_size=None):
     if table_size is None:
-        table_size = n * 2 + 1  # Simple heuristic for table size
+        table_size = n * 2 + 1  
     h = ch.ChainedHashTable(table_size)
     dataset = generate_data(n)
     for item in dataset:
