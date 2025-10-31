@@ -6,8 +6,6 @@ unique_stations = stations[1].unique().tolist()
 
 print('Our unique stations are: ', unique_stations)
 
-
-
 # List of station names from the dataset
 stations = unique_stations
 
@@ -18,8 +16,14 @@ operational_stations = set()
 for station in stations:
     operational_stations.add(station)
 
-# Example of querying the hash table to check if a station is operational
-query_station = 'Acton Main Line'
-is_operational = query_station in operational_stations
+# List of query stations
+query_stations = ['Ealing Broadway', 'Acton Main Line', 'Paddington', 'Bond Street', 'Tottenham Court Road']
 
-print(f'Is {query_station} operational? {is_operational}')
+# Loop through each station in the query list and check if it's operational in the hash table
+for query_station in query_stations:
+    # Use if statement to check if the station is in the set (hash table)
+    if query_station in operational_stations:
+        print(f"{query_station} is operational.")
+    else:
+        print(f"{query_station} is not operational.")
+
